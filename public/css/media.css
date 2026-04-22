@@ -1,0 +1,194 @@
+/* ================= GLOBAL ================= */
+
+.media-container {
+    padding: 40px;
+}
+
+.media-title {
+    text-align: center;
+    font-size: 32px;
+    color: #6a11cb;
+    margin-bottom: 25px;
+}
+
+.media-meta {
+    font-size: 13px;
+    color: #777;
+    margin: 5px 0;
+}
+
+/* ================= CONTROLS ================= */
+
+.media-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.media-controls input,
+.media-controls select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* ================= GRID ================= */
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* ================= CARD ================= */
+
+.media-card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= IMAGE ================= */
+
+.media-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ================= CONTENT ================= */
+
+.media-content {
+    padding-top: 10px;
+}
+
+/* ================= BUTTONS ================= */
+
+.media-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 14px;
+    background: #6a11cb;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.media-btn:hover {
+    background: #4e0fa3;
+}
+
+.media-btn.secondary {
+    background: #6c757d;
+}
+
+.media-btn.secondary:hover {
+    background: #545b62;
+}
+
+/* ================= ACTIONS ================= */
+
+.media-actions {
+    margin-top: 10px;
+}
+
+/* ================= BADGES ================= */
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 10px;
+    font-size: 11px;
+    border-radius: 20px;
+    color: white;
+}
+
+/* Announcement Badges */
+.badge.new { background: #28a745; }
+.badge.important { background: #ffc107; color: black; }
+.badge.urgent { background: #dc3545; }
+
+/* Award Categories */
+.badge.national { background: #007bff; }
+.badge.state { background: #28a745; }
+.badge.csr { background: #6f42c1; }
+.badge.international { background: #fd7e14; }
+
+/* ================= DEADLINE ================= */
+
+.deadline {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* ================= FEATURED (NEWSLETTER) ================= */
+
+.featured-newsletter {
+    display: flex;
+    gap: 20px;
+    background: #f8f6ff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.featured-newsletter img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.featured-content h3 {
+    color: #6a11cb;
+}
+
+/* ================= FEATURED (AWARD) ================= */
+
+.featured-award {
+    display: flex;
+    gap: 20px;
+    background: #fff7e6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.featured-award img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .featured-newsletter,
+    .featured-award {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-newsletter img,
+    .featured-award img {
+        width: 100%;
+    }
+
+    .media-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}

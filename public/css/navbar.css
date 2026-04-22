@@ -1,0 +1,283 @@
+/* ================= TOP INFORMATION BAR ================= */
+
+.top-bar{
+    background: linear-gradient(to right,#6a11cb,#8e44ad);
+    padding: 6px 40px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;   /* FIXED */
+    align-items: center;
+    border-bottom: 1px solid #c5c5c5;
+    color: white;
+}
+
+/* LEFT */
+.top-left{
+    flex: 1;
+    text-align: left;
+}
+
+/* RIGHT */
+.top-right{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-right span{
+    color: white;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    background: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.logo{
+    height: 65px;
+}
+
+.title-section{
+    text-align: center;
+}
+
+.main-title{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sub-title{
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background: linear-gradient(to right,#6a11cb,#8e44ad);
+    border-bottom: 3px solid #5e2ca5;
+}
+
+.navbar-container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= MAIN MENU ================= */
+
+.nav-menu{
+    list-style: none;   /* 🔥 REMOVE DOTS */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li{
+    list-style: none;   /* 🔥 REMOVE DOTS */
+    position: relative;
+    padding: 14px 22px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-menu li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+}
+
+/* ================= MENU HOVER ================= */
+
+.nav-menu li:hover{
+    background: rgba(255,255,255,0.25);
+    border-radius: 4px;
+}
+
+.nav-menu li.active{
+    background: #5e2ca5;
+    border-radius: 4px;
+}
+
+/* ================= FIRST DROPDOWN ================= */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 230px;
+    list-style: none;     /* 🔥 REMOVE DOTS */
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.dropdown-menu li{
+    list-style: none;     /* 🔥 REMOVE DOTS */
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child{
+    border-bottom: none;
+}
+
+.dropdown-menu li a{
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover{
+    background: #f3e8ff;
+    color: #6a11cb;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+/* ================= SECOND LEVEL SUBMENU ================= */
+
+.submenu{
+    position: relative;
+}
+
+.submenu-dropdown{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    min-width: 230px;
+    list-style: none;   /* 🔥 REMOVE DOTS */
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.submenu-dropdown li{
+    list-style: none;   /* 🔥 REMOVE DOTS */
+    border-bottom: 1px solid #eee;
+}
+
+.submenu-dropdown li:last-child{
+    border-bottom: none;
+}
+
+.submenu-dropdown li a{
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    font-size: 14px;
+}
+
+.submenu-dropdown li a:hover{
+    background: #f3e8ff;
+    color: #6a11cb;
+}
+
+.submenu:hover .submenu-dropdown{
+    display: block;
+}
+
+/* ================= MOBILE MENU ================= */
+
+.menu-toggle{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+    .header-container{
+        flex-direction: column;
+    }
+
+    .nav-menu{
+        flex-wrap: wrap;
+    }
+
+    .nav-menu li{
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .top-bar{
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .top-right{
+        justify-content: center;
+    }
+
+    .nav-menu{
+        flex-direction: column;
+        display: none;
+        background: #8e44ad;
+        width: 100%;
+    }
+
+    .nav-menu.active{
+        display: flex;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .dropdown-menu,
+    .submenu-dropdown{
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        background: #f5f5f5;
+    }
+
+    .dropdown.active > .dropdown-menu{
+        display: block;
+    }
+
+    .submenu.active > .submenu-dropdown{
+        display: block;
+    }
+}

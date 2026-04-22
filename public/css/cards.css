@@ -1,0 +1,234 @@
+/* ================= NEWS SECTION ================= */
+
+.news{
+width:1200px;
+margin:auto;
+margin-top:20px;
+}
+
+.news-container{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+padding:20px 0;
+}
+
+.news-card{
+background:#c7d5db;
+padding:10px;
+transition:0.3s;
+border-radius:6px;
+}
+
+.news-card:hover{
+transform:scale(1.03);
+}
+
+.news-card img{
+width:100%;
+height:210px;
+object-fit:cover;
+border-radius:5px;
+}
+
+.news-card p{
+font-size:14px;
+margin-top:6px;
+}
+
+
+
+/* ================= TESTIMONIAL SECTION ================= */
+
+.testimonials{
+width:1200px;
+margin:auto;
+margin-top:10px;
+}
+
+.testimonial-container{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+padding:20px 0;
+background:#cddc95;
+border-radius:6px;
+}
+
+.testimonial-card{
+background:#cddc95;
+padding:10px;
+text-align:center;
+}
+
+.testimonial-card img{
+width:160px;
+height:200px;
+object-fit:cover;
+margin-bottom:10px;
+border-radius:6px;
+}
+
+.testimonial-card p{
+font-size:14px;
+}
+
+
+
+/* ================= VIDEO SECTION ================= */
+
+.videos{
+width:1200px;
+margin:auto;
+margin-top:10px;
+}
+
+.video-container{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+padding:20px 0;
+margin-top:20px;
+background:#d3e6eb;
+border-radius:6px;
+}
+
+.video-card{
+background:white;
+padding:15px;
+border-radius:6px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.video-card video{
+width:100%;
+border-radius:5px;
+object-fit:cover;
+height:250px;
+}
+
+.video-card p{
+font-size:14px;
+margin-top:6px;
+}
+
+
+
+/* ================= PHOTO GALLERY ================= */
+
+.photo-container{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+margin-top:20px;
+}
+
+.photo-container img{
+width:100%;
+border-radius:6px;
+height:250px;
+object-fit:cover;
+}
+
+
+
+/* ================= COURSE CATALOG (NEW FIX) ================= */
+
+.course-page{
+width:1200px;
+margin:auto;
+margin-top:40px;
+}
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:20px;
+}
+
+.course-card{
+background:white;
+border-radius:8px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+padding-bottom:15px;
+transition:0.3s;
+}
+
+.course-card:hover{
+transform:translateY(-5px);
+}
+
+.course-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+display:block;
+}
+
+.course-card h3{
+font-size:18px;
+padding:10px 15px 0 15px;
+}
+
+.course-card p{
+font-size:14px;
+padding:5px 15px;
+color:#555;
+}
+
+.enroll-btn{
+margin-left:15px;
+margin-top:10px;
+display:inline-block;
+padding:8px 14px;
+background:#0b5ed7;
+color:white;
+border-radius:5px;
+font-size:14px;
+}
+
+.enroll-btn:hover{
+background:#084298;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+.news-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+.testimonial-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+.video-container{
+grid-template-columns:1fr;
+}
+
+.course-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.news-container{
+grid-template-columns:1fr;
+}
+
+.testimonial-container{
+grid-template-columns:1fr;
+}
+
+.course-grid{
+grid-template-columns:1fr;
+}
+
+}
